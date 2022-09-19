@@ -1,0 +1,38 @@
+server:
+  port: 8081
+
+##spring:
+  ##application:
+    ##name: backend API
+  ##datasource:
+   ##driverClassName: com.mysql.cj.jdbc.Driver
+   ##url: jdbc:mysql://localhost:3306/bd_api
+   ##username: root
+   ##password: Admin26*
+  ##jpa:
+    ##show-sql: true
+    ##database-platform: org.hibernate.dialect.MySQL8Dialect
+    ##hibernate:
+      ##ddl-auto: update
+
+
+
+
+spring:
+  application:
+    name: backend API
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: leo
+    password: 12345
+    url: "jdbc:h2:mem:mybd"
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: 'create-drop'
